@@ -23,11 +23,11 @@ From this moment starts array of block. Blocks are saved in left to right, follo
 
 ### Tile data description
 
-- uint16 for world foreground item id
-- uint16 for world background item id
-- uint16 of currently unknown data, it is recommended to keep them zero
-- uint8 for first item flags
-- uint8 for second item flags
+- uint16 - world foreground item id
+- uint16 - world background item id
+- uint16 - currently unknown data, it is recommended to keep them zero
+- uint8 - first item flags
+- uint8 - second item flags
 
 Content of first item flags:
 - 0x01 - ???
