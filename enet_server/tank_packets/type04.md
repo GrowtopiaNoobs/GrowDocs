@@ -51,43 +51,7 @@ Content of second item flags:
 
 This data might by followed by extra tile data. There can be determined if there are any extra tile data by item id. This is done by checking item id in items data and getting it's action type. Item type then has to be translated into extra tile data type, which requires translation table and can't be sadly done by other way. Then if this type is other than 0, tile extra data are added.
 
-They always begin with extra tile type, which is always one byte in size. It is also by this possible to change title's behavior by assigning it different extra tile type if it already has one, but this also might lead into some unexcepted crashes.
-
-Extra tile data types:
-- 000 - No extra data
-- 001 - Door
-- 002 - Sign
-- 003 - Lock
-- 004 - Seed
-- 005 - ???
-- 006 - Mailbox
-- 007 - Bulletin board
-- 008 - Dice
-- 009 - Chemical source
-- 010 - Achievement block
-- 011 - Heart monitor
-- 012 - Donation box
-- 013 - ???
-- 014 - Mannequin
-- 015 - Bunny egg
-- 016 - Game pack
-- 017 - Game generator
-- 018 - Xeonite crystal
-- 019 - Phone booth
-- 020 - Crystal
-- 021 - Crime in progress
-- 022 - ???
-- 023 - Display block
-- 024 - Vending machine
-- 028 - Giving tree
-- 033 - Country flag
-- 034 - ???
-- 035 - ???
-- 036 - ???
-- 037 - ???
-- 038 - ???
-- 039 - ???
-- 040 - Weather machine background
+You can read more about tile extra data more [here](extra_tile_data/README.md).
 
 ### Dropped items description
 
