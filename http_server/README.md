@@ -12,7 +12,7 @@ But now let's look what should be the content of this file:
 server|127.0.0.1
 port|17091
 type|1
-#maint|Mainetrance message
+#maint|Maintenance message
 
 beta_server|127.0.0.1
 beta_port|17091
@@ -27,7 +27,7 @@ And now explain all of the stuff one by one.
 `server` - IP adress to which should client connect.
 `port` - Port to which should client connect.
 `type` - I have no idea what it does.
-`maint` - This is mainterance message, if you remove `#` in front of it, then it will show this text. It is usually used when your ENet server is down.
+`maint` - This is maintenance message, if you remove `#` in front of it, then it will show this text. It is usually used when your ENet server is down.
 `beta_sever` - Same as `server`, but used when client is in beta mode.
 `beta_port` - Same as `port`, but used when client is in beta mode.
 `beta_type` - Same as `type`, but used when client is in beta mode.
