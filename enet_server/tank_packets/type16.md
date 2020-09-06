@@ -1,4 +1,4 @@
-# Tank packet type 10
+# Tank packet type 16
 
 Packet senders:
 - [ ] Client
