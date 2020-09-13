@@ -25,7 +25,7 @@ From this moment starts array of block. Blocks are saved in left to right, follo
 
 - uint16 - world foreground item id
 - uint16 - world background item id
-- uint16 - currently unknown data, it is recommended to keep them zero
+- uint16 - index of the lock that owns that tile, 0 if the tile isn't locked
 - uint8 - first item flags
 - uint8 - second item flags
 
