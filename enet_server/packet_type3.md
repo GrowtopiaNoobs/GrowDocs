@@ -1,7 +1,7 @@
 # Packet type 3
 
 Packet senders:
-- [ ] Client
-- [x] Server
+- [x] Client
+- [ ] Server
 
 This is text packet.

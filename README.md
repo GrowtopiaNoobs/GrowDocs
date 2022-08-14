@@ -9,5 +9,5 @@ There are two servers required for growtopia to work:
 You will find under those links how each of those parts works.
 
 Also you should check this stuff which is directly or undirectly related to packets:
-- [Types definiton](types_definition.md)
-- [Items dat](items_dat/README.md)
+- [Type definitions](type_definitions.md)
+- [Items.dat](items_dat/README.md)

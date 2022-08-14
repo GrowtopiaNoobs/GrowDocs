@@ -1,6 +1,8 @@
 # Extra tile data
 
-Extra tile data always begin with extra tile type, which is always one byte in size. It is also by this possible to change title's behavior by assigning it different extra tile type if it already has one, but this also might lead into some unexcepted crashes.
+Extra tile data always begins with extra tile type, which is always one byte in size.
+It is also possible to change a tile's behavior by assigning it different extra tile
+type if it already has one, but this might lead into some client-side crashes.
 
 Extra tile data types:
 - [000 - No extra data](type000.md)
@@ -12,7 +14,7 @@ Extra tile data types:
 - [006 - Mailbox](type006.md)
 - [007 - Bulletin board](type007.md)
 - [008 - Dice](type008.md)
-- [009 - Chemical source](type009.md)
+- [009 - Provider](type009.md)
 - [010 - Achievement block](type010.md)
 - [011 - Heart monitor](type011.md)
 - [012 - Donation box](type012.md)
@@ -21,7 +23,7 @@ Extra tile data types:
 - [015 - Bunny egg](type015.md)
 - [016 - Game pack](type016.md)
 - [017 - Game generator](type017.md)
-- [018 - Xeonite crystal](type018.md)
+- [018 - Xenonite crystal](type018.md)
 - [019 - Phone booth](type019.md)
 - [020 - Crystal](type020.md)
 - [021 - Crime in progress](type021.md)
@@ -41,7 +43,7 @@ Extra tile data types:
 - 039 - ???
 - [040 - Weather machine background](type040.md)
 
-Action type to extra tile type conversion:
+Item type to extra tile type conversion (Refer to [Item Types](items_dat/item_types.md) for more info about the item type):
 - 2 => 1
 - 3 => 3
 - 10 => 2

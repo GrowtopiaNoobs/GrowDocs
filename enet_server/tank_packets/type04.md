@@ -17,9 +17,11 @@ This packet is known as world packet. It contains all world blocks and their set
 - string - world name
 - uint32 - width in world blocks
 - uint32 - height in world blocks
-- uint32 - world size, which is simply multiplication of world width and height
+- uint32 - world tile count, which is simply multiplication of world width and height
 
-From this moment starts array of block. Blocks are saved in left to right, followed by up to down order. All block data are placed one after another without any separator or anything.
+NOTE! The width and height may not be bigger than 255. Trying to load more than 65025 (255 \* 255) tiles also messes up the game.
+
+From this moment starts array of tiles. Tiles are saved in left to right, followed by up to down order. Every tile's data is placed one after another without any separator.
 
 ### Tile data description
 
@@ -30,26 +32,29 @@ From this moment starts array of block. Blocks are saved in left to right, follo
 - uint8 - second item flags
 
 Content of first item flags:
-- 0x01 - ???
-- 0x02 - ???
-- 0x04 - ???
-- 0x08 - ???
-- 0x10 - ???
-- 0x20 - Rotation of item (left/rigt)
-- 0x40 - Enabled state of item
-- 0x80 - Is item accesible by public
+- 0x0001 - ???
+- 0x0002 - ???
+- 0x0004 - ???
+- 0x0008 - ???
+- 0x0010 - Enable tree behaviour (otherwise, the tree doesn't grow)
+- 0x0020 - Rotation of item (when set, the tile faces right if it's a multifacing tile)
+- 0x0040 - Enabled/opened state of item
+- 0x0080 - Is item accesible by public (used by entrances)
+- 0x0100 - ???
+- 0x0200 - ???
+- 0x0400 - Water
+- 0x0800 - Glue
+- 0x1000 - Fire
+- 0x2000 - Red
+- 0x4000 - Green
+- 0x8000 - Blue
 
-Content of second item flags:
-- 0x01 - ???
-- 0x02 - ???
-- 0x04 - Water
-- 0x08 - Glue
-- 0x10 - Fire
-- 0x20 - Red
-- 0x40 - Green
-- 0x80 - Blue
+This data might by followed by extra tile data. There can be determined if there are any extra tile data by item id.
+This is done by checking item id in items data and getting it's action type. Item type then has to be translated into
+extra tile data type, which requires translation table and can't be sadly done by other way. Then if this type is other
+than 0, tile extra data are added.
 
-This data might by followed by extra tile data. There can be determined if there are any extra tile data by item id. This is done by checking item id in items data and getting it's action type. Item type then has to be translated into extra tile data type, which requires translation table and can't be sadly done by other way. Then if this type is other than 0, tile extra data are added.
+If the item flags has flag 0x0001 set, it forces an item data serialization.
 
 You can read more about tile extra data more [here](extra_tile_data/README.md).
 
